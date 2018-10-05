@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+notebook = "*"
+sympy = "*"
+numpy = "*"
+numba = "*"
+scipy = "*"
+bokeh = "*"
+pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+pscript = "*"
+plotly = "*"
+
+[dev-packages]
+pdbpp = "*"
+
+[requires]
+python_version = "3.6"
