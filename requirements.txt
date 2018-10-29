@@ -1,0 +1,11 @@
+notebook
+sympy
+numpy
+numba
+scipy
+bokeh
+pandas
+matplotlib
+scikit-learn
+pscript
+plotly
