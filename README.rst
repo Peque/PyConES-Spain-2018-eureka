@@ -3,6 +3,8 @@ Eureka!
 
 |logo|
 
+|binder|
+
 Through experimentation, math and, of course, Python, we will do science! We
 will explore the symbolic calculus, the numeric and even the machine learning
 field.
@@ -24,51 +26,18 @@ Then run Jupyter notebook with::
    pipenv run jupyter notebook
 
 
-Colab
-=====
+Binder
+======
 
-You can run the whole notebook online without the need to install any
-dependencies in your local machine using `Google's Colaboratory
-<https://colab.research.google.com>`__, but that will require some tweaks.
-
-Use a code cell to install the required dependencies::
-
-   !pip install bokeh numba
-
-Upload all the ``.wav`` files to your environment and all the images under
-``/images/`` too. Then, when running code cells, make sure to remove the image
-or audio file paths if any.
-
-If you cannot visualize your Bokeh figures, make sure to define this function
-right after the first Bokeh imports in the notebook:
-
-.. code:: python
-
-   from bokeh.plotting import show as show_bokeh
-
-
-   def show(figure):
-       output_notebook()
-       show_bokeh(figure)
-
-If you cannot visualize your Plotly figures, make sure to call this function from the same cell where you are plotting the figure:
-
-.. code:: python
-
-   def configure_plotly_browser_state():
-       import IPython
-       display(IPython.core.display.HTML('''
-           <script src="/static/components/requirejs/require.js"></script>
-           <script>
-             requirejs.config({
-               paths: {
-                 base: '/static/base',
-                 plotly: 'https://cdn.plot.ly/plotly-latest.min.js?noext',
-               },
-             });
-           </script>
-       '''))
+Alternatively, if you do not want to setup a virtual environment, you may want
+to `try Binder
+<https://mybinder.org/v2/gh/Peque/PyConES-Spain-2018-eureka/binder?filepath=Eureka.ipynb>`__
+to run the notebook and visualize the results.
 
 
 .. |logo| image:: ./images/pycones-logo.svg
    :width: 150
+.. |binder| image:: https://mybinder.org/badge.svg
+   :target: https://mybinder.org/v2/gh/Peque/PyConES-Spain-2018-eureka/binder?filepath=Eureka.ipynb
+   :alt: Online notebook at mybinder.org
+
